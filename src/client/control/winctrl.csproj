@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BB64C5E-70EB-42C0-9836-EC2D15CFC989}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>WebHard.WinCtrl</AssemblyName>
+    <AssemblyOriginatorKeyFile>winctrl.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebHard.WinCtrl</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v13.1, Version=13.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="uBizSoft.LIB.Configuration.V34, Version=3.4.2007.10, Culture=neutral, PublicKeyToken=edc90464fc7d0e3f, processorArchitecture=MSIL" />
+    <Reference Include="uBizSoft.LIB.Logging.V34, Version=3.4.2007.10, Culture=neutral, PublicKeyToken=e33f239f1d5b7560, processorArchitecture=MSIL" />
+    <Reference Include="uBizSoft.PRD.WebHard.Proxy.V34, Version=3.4.2007.10, Culture=neutral, PublicKeyToken=901a0b6890091a61, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\whproxy\assembly\uBizSoft.PRD.WebHard.Proxy.V34.dll</HintPath>
+    </Reference>
+    <Reference Include="uBizSoft.UIC.Win.Control.V34, Version=3.4.2007.10, Culture=neutral, PublicKeyToken=39d1da6139b2cd4e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="schema\WinControl.xsx">
+      <DependentUpon>WinControl.xsd</DependentUpon>
+    </None>
+    <Compile Include="dialogs\AuthListDialog.cs" />
+    <Compile Include="dialogs\AuthListDialog.Designer.cs">
+      <DependentUpon>AuthListDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\ConfirmDialog.cs" />
+    <Compile Include="dialogs\ConfirmDialog.Designer.cs">
+      <DependentUpon>ConfirmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\DeleteDialog.cs" />
+    <Compile Include="dialogs\DeleteDialog.Designer.cs">
+      <DependentUpon>DeleteDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\MultiDownForm.cs" />
+    <Compile Include="forms\MultiDownForm.Designer.cs">
+      <DependentUpon>MultiDownForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\SingleDownForm.cs" />
+    <Compile Include="forms\SingleDownForm.Designer.cs">
+      <DependentUpon>SingleDownForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\FileInfoDialog.cs" />
+    <Compile Include="dialogs\FileInfoDialog.Designer.cs">
+      <DependentUpon>FileInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\FolderListDialog.cs" />
+    <Compile Include="dialogs\FolderListDialog.Designer.cs">
+      <DependentUpon>FolderListDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\MoveDialog.cs" />
+    <Compile Include="dialogs\MoveDialog.Designer.cs">
+      <DependentUpon>MoveDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\RightsDialog.cs" />
+    <Compile Include="dialogs\RightsDialog.Designer.cs">
+      <DependentUpon>RightsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\UploadForm.cs" />
+    <Compile Include="forms\UploadForm.Designer.cs">
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="library\AppMediator.cs" />
+    <Compile Include="library\DownloadHelper.cs" />
+    <Compile Include="library\DragHelper.cs" />
+    <Compile Include="library\MainHelper.cs" />
+    <Compile Include="library\MenuItem.cs" />
+    <Compile Include="library\ResourceHelper.cs">
+    </Compile>
+    <Compile Include="library\SearchItem.cs" />
+    <Compile Include="library\StringHelper.cs" />
+    <Compile Include="library\UploadHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="MainBox.cs" />
+    <Compile Include="MainBox.Designer.cs">
+      <DependentUpon>MainBox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dialogs\AuthListDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AuthListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\ConfirmDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConfirmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\DeleteDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DeleteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\MultiDownForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MultiDownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\SingleDownForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SingleDownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FileInfoDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FileInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FolderListDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FolderListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\MoveDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MoveDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\RightsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RightsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UploadForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="schema\WinControl.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="winctrl.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\16-16\author_off.gif" />
+    <Content Include="image\16-16\author_on.gif" />
+    <Content Include="image\16-16\author_over.gif" />
+    <Content Include="image\16-16\cfolder_off.gif" />
+    <Content Include="image\16-16\cfolder_on.gif" />
+    <Content Include="image\16-16\cfolder_over.gif" />
+    <Content Include="image\16-16\delete_off.gif" />
+    <Content Include="image\16-16\delete_on.gif" />
+    <Content Include="image\16-16\delete_over.gif" />
+    <Content Include="image\16-16\down_off.gif" />
+    <Content Include="image\16-16\down_on.gif" />
+    <Content Include="image\16-16\down_over.gif" />
+    <Content Include="image\16-16\power_off.gif" />
+    <Content Include="image\16-16\power_on.gif" />
+    <Content Include="image\16-16\power_over.gif" />
+    <Content Include="image\16-16\renew_off.gif" />
+    <Content Include="image\16-16\renew_on.gif" />
+    <Content Include="image\16-16\renew_over.gif" />
+    <Content Include="image\16-16\upload_off.gif" />
+    <Content Include="image\16-16\upload_on.gif" />
+    <Content Include="image\16-16\upload_over.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>:Begin
+ if not ($(ConfigurationName))==(Debug) goto End
+
+ SET pMODE=BIZ
+ SET iMODE=GAC
+
+ SET application_service="uBizSoft WebHard Service Provider V34"
+ SET application_version=3.4.2007.10
+ SET application_rootpath=$(SolutionDir)
+
+:Initilize
+ SET framewrk_path=D:\WorkingFolder\UBSV3\SDK\v3.4.2007.10\tools\assembly
+ SET framebiz_path=%25framewrk_path%25
+ if (%25pMODE%25)==(BIZ) SET framebiz_path=%25application_rootpath%25\assembly
+ if not exist %25framebiz_path%25 mkdir %25framebiz_path%25
+
+ SET batch_name=%25framebiz_path%25\$(TargetName).bat
+ SET stopc_name=%25framebiz_path%25\$(TargetName).Stop.vbs
+ SET start_name=%25framebiz_path%25\$(TargetName).Start.vbs
+
+:PreSetup
+  echo @ECHO OFF&gt;%25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+  echo @rem start install batch procedure    &gt;&gt; %25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+
+  echo SET assembly_name=$(TargetName)&gt;&gt; %25batch_name%25
+  echo SET framebin_path=%25framewrk_path%25\bin&gt;&gt; %25batch_name%25
+  echo SET assembly_path=%25framebiz_path%25&gt;&gt; %25batch_name%25
+  echo SET assembly_version=%25application_version%25&gt;&gt; %25batch_name%25
+  echo SET install_mode=server&gt;&gt; %25batch_name%25
+  echo SET service_name=%25application_service%25&gt;&gt; %25batch_name%25
+  echo SET application_name="$(TargetName)"&gt;&gt; %25batch_name%25
+
+  echo SET dotnet_version=v2.0.50727&gt;&gt; %25batch_name%25
+  echo SET install_mode=server&gt;&gt; %25batch_name%25
+  echo SET silent_mode=silent&gt;&gt; %25batch_name%25
+
+  if (%25iMODE%25)==(COM) goto PreSetupCOM
+  if (%25iMODE%25)==(GAC) goto PreSetupGAC
+  if (%25iMODE%25)==(SVC) goto PreSetupSVC
+ goto Start
+
+ :PreSetupGAC
+ goto Start
+
+ :PreSetupCOM
+  echo Option Explicit &gt; %25stopc_name%25
+  echo Dim oCatalog&gt;&gt; %25stopc_name%25
+  echo Set oCatalog = CreateObject("COMAdmin.COMAdminCatalog")&gt;&gt; %25stopc_name%25
+  echo oCatalog.ShutdownApplication "$(TargetName)"&gt;&gt; %25stopc_name%25
+  echo Set oCatalog = Nothing&gt;&gt; %25stopc_name%25
+ goto Start
+
+ :PreSetupSVC
+  echo rem net stop %25%25service_name%25%25&gt;&gt; %25batch_name%25
+ goto Start
+
+:Start
+ copy /Y $(TargetPath) %25framebiz_path%25
+ goto PostSetup
+
+:PostSetup
+ if (%25iMODE%25)==(COM) goto PostSetupCOM
+ if (%25iMODE%25)==(GAC) goto PostSetupGAC
+ if (%25iMODE%25)==(SVC) goto PostSetupSVC
+ goto Finish
+
+ :PostSetupGAC
+  echo @call %25%25framebin_path%25%25\InstallGAC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  call %25batch_name%25
+ goto Finish
+
+ :PostSetupCOM
+  echo @call %25%25assembly_path%25%25\$(TargetName).Stop.vbs&gt;&gt; %25batch_name%25
+  echo @call %25%25framebin_path%25%25\InstallGAC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  echo @call %25%25framebin_path%25%25\InstallCOM.bat %25%25application_name%25%25 %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  call %25batch_name%25
+  echo rem @call %25%25assembly_path%25%25\$(TargetName).Start.vbs&gt;&gt; %25batch_name%25
+
+  echo Option Explicit &gt; %25start_name%25
+  echo Private catalog&gt;&gt; %25start_name%25
+  echo Private applications&gt;&gt; %25start_name%25
+  echo Private app&gt;&gt; %25start_name%25
+  echo Set catalog = CreateObject("COMAdmin.COMAdminCatalog")&gt;&gt; %25start_name%25
+  echo Set applications = catalog.GetCollection("Applications")&gt;&gt; %25start_name%25
+  echo applications.populate&gt;&gt; %25start_name%25
+  echo Dim AppObject&gt;&gt; %25start_name%25
+  echo    For Each AppObject In applications&gt;&gt; %25start_name%25
+  echo         If AppObject.Name = "$(TargetName)" Then&gt;&gt; %25start_name%25
+  echo             Set app = AppObject&gt;&gt; %25start_name%25
+  echo             Exit For&gt;&gt; %25start_name%25
+  echo         End If&gt;&gt; %25start_name%25
+  echo     Next&gt;&gt; %25start_name%25
+  echo app.Value("RunForever") = True&gt;&gt; %25start_name%25
+  echo applications.SaveChanges&gt;&gt; %25start_name%25
+  echo catalog.StartApplication "$(TargetName)"&gt;&gt; %25start_name%25
+  echo Set catalog = Nothing&gt;&gt; %25start_name%25
+ goto Finish
+
+ :PostSetupSVC
+  echo @call %25%25framebin_path%25%25\InstallSVC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25service_name%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  echo rem net start %25%25service_name%25%25&gt;&gt; %25batch_name%25
+  rem call %25batch_name%25
+ goto Finish
+
+:Finish
+  echo @rem =================================&gt;&gt; %25batch_name%25
+  echo @rem Stop install batch procedure     &gt;&gt; %25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+
+:End</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WinControl" targetNamespace="http://tempuri.org/WinControl.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/WinControl.xsd" xmlns:mstns="http://tempuri.org/WinControl.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="authinfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="guid" type="xs:string" />
+				<xs:element name="companyid" type="xs:string" />
+				<xs:element name="fileid" type="xs:string" />
+				<xs:element name="ftype" type="xs:string" />
+				<xs:element name="vsize" type="xs:integer" />
+				<xs:element name="vtype" type="xs:string" />
+				<xs:element name="rname" type="xs:string" />
+				<xs:element name="title" type="xs:string" />
+				<xs:element name="description" type="xs:string" />
+				<xs:element name="wdate" type="xs:date" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="rootnode">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="guid" type="xs:string" />
+				<xs:element name="companyid" type="xs:string" />
+				<xs:element name="fileid" type="xs:string" />
+				<xs:element name="ftype" type="xs:string" />
+				<xs:element name="vsize" type="xs:integer" />
+				<xs:element name="vtype" type="xs:string" />
+				<xs:element name="rname" type="xs:string" />
+				<xs:element name="title" type="xs:string" />
+				<xs:element name="description" type="xs:string" />
+				<xs:element name="attach" type="xs:string" />
+				<xs:element name="wcode" type="xs:string" />
+				<xs:element name="wname" type="xs:string" />
+				<xs:element name="wdate" type="xs:dateTime" />
+				<xs:element name="mtype" type="xs:string" />
+				<xs:element name="control" type="xs:string" />
+				<xs:element name="cmodify" type="xs:string" />
+				<xs:element name="cread" type="xs:string" />
+				<xs:element name="cdelete" type="xs:string" />
+				<xs:element name="cview" type="xs:string" />
+				<xs:element name="cfolder" type="xs:string" />
+				<xs:element name="cfile" type="xs:string" />
+				<xs:element name="code" type="xs:string" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="filecount" type="xs:int" />
+				<xs:element name="noauth" type="xs:int" />
+				<xs:element name="parentid" type="xs:string" />
+				<xs:element name="displayname" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="search">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="seekey" type="xs:int" />
+				<xs:element name="seeval" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="authlist">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="guid" type="xs:string" />
+				<xs:element name="member" type="xs:string" />
+				<xs:element name="mtype" type="xs:string" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="control" type="xs:string" />
+				<xs:element name="cmodify" type="xs:string" />
+				<xs:element name="cread" type="xs:string" />
+				<xs:element name="cdelete" type="xs:string" />
+				<xs:element name="cview" type="xs:string" />
+				<xs:element name="cfolder" type="xs:string" />
+				<xs:element name="cfile" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="multidownload">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="index" type="xs:int" />
+				<xs:element name="guid" type="xs:string" />
+				<xs:element name="companyid" type="xs:string" />
+				<xs:element name="fileid" type="xs:string" />
+				<xs:element name="vtype" type="xs:string" />
+				<xs:element name="vsize" type="xs:double" />
+				<xs:element name="rname" type="xs:string" />
+				<xs:element name="wdate" type="xs:date" />
+				<xs:element name="status" type="xs:string" />
+				<xs:element name="filepath" type="xs:string" />
+				<xs:element name="savepath" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="fileinfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" type="xs:string" />
+				<xs:element name="description" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FileList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" type="xs:string" />
+				<xs:element name="rname" type="xs:string" />
+				<xs:element name="fsize" type="xs:double" />
+				<xs:element name="ftype" type="xs:string" />
+				<xs:element name="wdate" type="xs:string" />
+				<xs:element name="writer" type="xs:string" />
+				<xs:element name="fauth" type="xs:string" />
+				<xs:element name="location" type="xs:string" />
+				<xs:element name="tag" type="xs:anyType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--이 파일은 XML 스키마 디자이너에서 자동 생성되었습니다. 이 파일에는 디자이너 화면의 구성 요소에 대한 레이아웃 정보가 저장됩니다.-->
+<XSDDesignerLayout Style="TopDown" layoutVersion="2" viewPortLeft="-206" viewPortTop="202" zoom="100">
+    <authinfo_XmlElement left="238" top="1191" width="5821" height="7090" selected="0" zOrder="1" index="0" expanded="1" />
+    <rootnode_XmlElement left="6826" top="1188" width="5292" height="14710" selected="0" zOrder="2" index="1" expanded="1" />
+    <search_XmlElement left="45930" top="1254" width="5292" height="3281" selected="0" zOrder="5" index="2" expanded="1" />
+    <authlist_XmlElement left="51856" top="1254" width="5292" height="3281" selected="0" zOrder="6" index="3" expanded="1" />
+    <multidownload_XmlElement left="57782" top="1254" width="5292" height="3281" selected="0" zOrder="7" index="4" expanded="1" />
+    <fileinfo_XmlElement left="63708" top="1254" width="5292" height="3281" selected="0" zOrder="8" index="5" expanded="1" />
+    <FileList_XmlElement left="40004" top="1244" width="5292" height="8519" selected="0" zOrder="4" index="6" expanded="1" />
+</XSDDesignerLayout>

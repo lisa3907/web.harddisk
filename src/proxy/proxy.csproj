@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8E5319D-C815-4A7B-BC00-1D0923EB4AB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>uBizSoft.PRD.WebHard.Proxy</RootNamespace>
+    <AssemblyName>uBizSoft.PRD.WebHard.Proxy.V34</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\proxy.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="uBizSoft.LIB.Configuration.V34, Version=3.4.2007.10, Culture=neutral, PublicKeyToken=edc90464fc7d0e3f, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebHardWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="whHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/WhdWS_V34/WebHardWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebHardWS\</RelPath>
+      <UpdateFromURL>http://localhost/WhdWS_V34/WebHardWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>uBizSoft_PRD_WebHard_WhrdProxy_V33_WebHardWS_WebHardWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\proxy.snk" />
+    <None Include="Web References\WebHardWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebHardWS\WebHardWS.disco" />
+    <None Include="Web References\WebHardWS\WebHardWS.wsdl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>:Begin
+ if not ($(ConfigurationName))==(Debug) goto End
+
+ SET pMODE=BIZ
+ SET iMODE=GAC
+
+ SET application_service="uBizSoft WebHard Service Provider V34"
+ SET application_version=3.4.2007.10
+ SET application_rootpath=$(SolutionDir)
+
+:Initilize
+ SET framewrk_path=D:\WorkingFolder\UBSV3\SDK\V3.3.2007.01\tools\assembly
+ SET framebiz_path=%25framewrk_path%25
+ if (%25pMODE%25)==(BIZ) SET framebiz_path=%25application_rootpath%25\assembly
+ if not exist %25framebiz_path%25 mkdir %25framebiz_path%25
+
+ SET batch_name=%25framebiz_path%25\$(TargetName).bat
+ SET stopc_name=%25framebiz_path%25\$(TargetName).Stop.vbs
+ SET start_name=%25framebiz_path%25\$(TargetName).Start.vbs
+
+:PreSetup
+  echo @ECHO OFF&gt;%25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+  echo @rem start install batch procedure    &gt;&gt; %25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+
+  echo SET assembly_name=$(TargetName)&gt;&gt; %25batch_name%25
+  echo SET framebin_path=%25framewrk_path%25\bin&gt;&gt; %25batch_name%25
+  echo SET assembly_path=%25framebiz_path%25&gt;&gt; %25batch_name%25
+  echo SET assembly_version=%25application_version%25&gt;&gt; %25batch_name%25
+  echo SET install_mode=server&gt;&gt; %25batch_name%25
+  echo SET service_name=%25application_service%25&gt;&gt; %25batch_name%25
+  echo SET application_name="$(TargetName)"&gt;&gt; %25batch_name%25
+
+  echo SET dotnet_version=v2.0.50727&gt;&gt; %25batch_name%25
+  echo SET install_mode=server&gt;&gt; %25batch_name%25
+  echo SET silent_mode=silent&gt;&gt; %25batch_name%25
+
+  if (%25iMODE%25)==(COM) goto PreSetupCOM
+  if (%25iMODE%25)==(GAC) goto PreSetupGAC
+  if (%25iMODE%25)==(SVC) goto PreSetupSVC
+ goto Start
+
+ :PreSetupGAC
+ goto Start
+
+ :PreSetupCOM
+  echo Option Explicit &gt; %25stopc_name%25
+  echo Dim oCatalog&gt;&gt; %25stopc_name%25
+  echo Set oCatalog = CreateObject("COMAdmin.COMAdminCatalog")&gt;&gt; %25stopc_name%25
+  echo oCatalog.ShutdownApplication "$(TargetName)"&gt;&gt; %25stopc_name%25
+  echo Set oCatalog = Nothing&gt;&gt; %25stopc_name%25
+ goto Start
+
+ :PreSetupSVC
+  echo rem net stop %25%25service_name%25%25&gt;&gt; %25batch_name%25
+ goto Start
+
+:Start
+ copy /Y $(TargetPath) %25framebiz_path%25
+ goto PostSetup
+
+:PostSetup
+ if (%25iMODE%25)==(COM) goto PostSetupCOM
+ if (%25iMODE%25)==(GAC) goto PostSetupGAC
+ if (%25iMODE%25)==(SVC) goto PostSetupSVC
+ goto Finish
+
+ :PostSetupGAC
+  echo @call %25%25framebin_path%25%25\InstallGAC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  call %25batch_name%25
+ goto Finish
+
+ :PostSetupCOM
+  echo @call %25%25assembly_path%25%25\$(TargetName).Stop.vbs&gt;&gt; %25batch_name%25
+  echo @call %25%25framebin_path%25%25\InstallGAC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  echo @call %25%25framebin_path%25%25\InstallCOM.bat %25%25application_name%25%25 %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  call %25batch_name%25
+  echo rem @call %25%25assembly_path%25%25\$(TargetName).Start.vbs&gt;&gt; %25batch_name%25
+
+  echo Option Explicit &gt; %25start_name%25
+  echo Private catalog&gt;&gt; %25start_name%25
+  echo Private applications&gt;&gt; %25start_name%25
+  echo Private app&gt;&gt; %25start_name%25
+  echo Set catalog = CreateObject("COMAdmin.COMAdminCatalog")&gt;&gt; %25start_name%25
+  echo Set applications = catalog.GetCollection("Applications")&gt;&gt; %25start_name%25
+  echo applications.populate&gt;&gt; %25start_name%25
+  echo Dim AppObject&gt;&gt; %25start_name%25
+  echo    For Each AppObject In applications&gt;&gt; %25start_name%25
+  echo         If AppObject.Name = "$(TargetName)" Then&gt;&gt; %25start_name%25
+  echo             Set app = AppObject&gt;&gt; %25start_name%25
+  echo             Exit For&gt;&gt; %25start_name%25
+  echo         End If&gt;&gt; %25start_name%25
+  echo     Next&gt;&gt; %25start_name%25
+  echo app.Value("RunForever") = True&gt;&gt; %25start_name%25
+  echo applications.SaveChanges&gt;&gt; %25start_name%25
+  echo catalog.StartApplication "$(TargetName)"&gt;&gt; %25start_name%25
+  echo Set catalog = Nothing&gt;&gt; %25start_name%25
+ goto Finish
+
+ :PostSetupSVC
+  echo @call %25%25framebin_path%25%25\InstallSVC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25service_name%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  echo rem net start %25%25service_name%25%25&gt;&gt; %25batch_name%25
+  rem call %25batch_name%25
+ goto Finish
+
+:Finish
+  echo @rem =================================&gt;&gt; %25batch_name%25
+  echo @rem Stop install batch procedure     &gt;&gt; %25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+
+:End</PostBuildEvent>
+  </PropertyGroup>
+</Project>

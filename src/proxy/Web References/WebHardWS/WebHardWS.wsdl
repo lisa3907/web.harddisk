@@ -1,0 +1,2016 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ubizsoft.com/WebHard.WProxy/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.ubizsoft.com/WebHard.WProxy/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ubizsoft.com/WebHard.WProxy/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="CheckFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckFolderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_rname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateFolderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRootFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_rname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRootFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateRootFolderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFolderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_seekds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="p_powerUser" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthFileList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_powerUser" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthFileListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthFileListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_powerUser" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_powerUser" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_powerUser" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrgCenterList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrgCenterListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrgCenterListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fields" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistsFolderInFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistsFolderInFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsExistsFolderInFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistsRootFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_rname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistsRootFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsExistsRootFolderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistsSubFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsExistsSubFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsExistsSubFolderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsPowerUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsPowerUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsPowerUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_srcset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="p_rmvset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MoveFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_tfileid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_sfileid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveFolderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAuthList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_checked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ftype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_authds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAuthListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAuthListResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFileInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_desc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFileInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateFileInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFolderName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_rname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFolderNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateFolderNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDownloadFileHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDownloadFileHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDownloadFileHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseDownloadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseDownloadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CloseDownloadFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_offset" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_bufferSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileSize">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileSizeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFileSizeResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareDownloadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareDownloadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PrepareDownloadFileResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_filesize" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_maxlength" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUploadFileHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUploadFileHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckUploadFileHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FailureCloseUploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FailureCloseUploadFileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PrepareUploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_infset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareUploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PrepareUploadFileResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_fileid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_maxlength" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuccessCloseUploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_infset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuccessCloseUploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuccessCloseUploadFileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_buffer" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_offset" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_writeCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AppendChunk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_buffer" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_offset" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_bytesRead" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AppendChunkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AppendChunkResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckFileHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckFileHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckFileHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadChunk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_wdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_filename" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_offset" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_bufferSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadChunkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadChunkResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenInforItemList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_items" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGenInforItemListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenInforItemListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConstantSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_appkey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_default" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConstantSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConstantSelectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TranslateDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="p_tableindex" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_culture" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_columns" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TranslateDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TranslateDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TranslateText">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_cocd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_certkey" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_ipadrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_culture" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_text" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TranslateTextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TranslateTextResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckFolder" />
+  </wsdl:message>
+  <wsdl:message name="CheckFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFolder" />
+  </wsdl:message>
+  <wsdl:message name="CreateFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateRootFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateRootFolder" />
+  </wsdl:message>
+  <wsdl:message name="CreateRootFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateRootFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFolder" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:FileSearch" />
+  </wsdl:message>
+  <wsdl:message name="FileSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:FileSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthFileListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthFileList" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthFileListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthList" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderList" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrgCenterListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrgCenterList" />
+  </wsdl:message>
+  <wsdl:message name="GetOrgCenterListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrgCenterListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsExistsFolderInFileSoapIn">
+    <wsdl:part name="parameters" element="tns:IsExistsFolderInFile" />
+  </wsdl:message>
+  <wsdl:message name="IsExistsFolderInFileSoapOut">
+    <wsdl:part name="parameters" element="tns:IsExistsFolderInFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsExistsRootFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:IsExistsRootFolder" />
+  </wsdl:message>
+  <wsdl:message name="IsExistsRootFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:IsExistsRootFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsExistsSubFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:IsExistsSubFolder" />
+  </wsdl:message>
+  <wsdl:message name="IsExistsSubFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:IsExistsSubFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsPowerUserSoapIn">
+    <wsdl:part name="parameters" element="tns:IsPowerUser" />
+  </wsdl:message>
+  <wsdl:message name="IsPowerUserSoapOut">
+    <wsdl:part name="parameters" element="tns:IsPowerUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveFile" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveFolder" />
+  </wsdl:message>
+  <wsdl:message name="MoveFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAuthListSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAuthList" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAuthListSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAuthListResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFileInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFileInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFolderNameSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFolderName" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFolderNameSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFolderNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckDownloadFileHashSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckDownloadFileHash" />
+  </wsdl:message>
+  <wsdl:message name="CheckDownloadFileHashSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckDownloadFileHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseDownloadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseDownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="CloseDownloadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseDownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSizeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileSize" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSizeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrepareDownloadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareDownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="PrepareDownloadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareDownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUploadFileHashSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUploadFileHash" />
+  </wsdl:message>
+  <wsdl:message name="CheckUploadFileHashSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUploadFileHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="FailureCloseUploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:FailureCloseUploadFile" />
+  </wsdl:message>
+  <wsdl:message name="FailureCloseUploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:FailureCloseUploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrepareUploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareUploadFile" />
+  </wsdl:message>
+  <wsdl:message name="PrepareUploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareUploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuccessCloseUploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SuccessCloseUploadFile" />
+  </wsdl:message>
+  <wsdl:message name="SuccessCloseUploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SuccessCloseUploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="AppendChunkSoapIn">
+    <wsdl:part name="parameters" element="tns:AppendChunk" />
+  </wsdl:message>
+  <wsdl:message name="AppendChunkSoapOut">
+    <wsdl:part name="parameters" element="tns:AppendChunkResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckFileHashSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckFileHash" />
+  </wsdl:message>
+  <wsdl:message name="CheckFileHashSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckFileHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadChunkSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadChunk" />
+  </wsdl:message>
+  <wsdl:message name="DownloadChunkSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadChunkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenInforItemListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenInforItemList" />
+  </wsdl:message>
+  <wsdl:message name="GetGenInforItemListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenInforItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConstantSelectSoapIn">
+    <wsdl:part name="parameters" element="tns:ConstantSelect" />
+  </wsdl:message>
+  <wsdl:message name="ConstantSelectSoapOut">
+    <wsdl:part name="parameters" element="tns:ConstantSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="TranslateDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:TranslateDataSet" />
+  </wsdl:message>
+  <wsdl:message name="TranslateDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:TranslateDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="TranslateTextSoapIn">
+    <wsdl:part name="parameters" element="tns:TranslateText" />
+  </wsdl:message>
+  <wsdl:message name="TranslateTextSoapOut">
+    <wsdl:part name="parameters" element="tns:TranslateTextResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WhdHelperSoap">
+    <wsdl:operation name="CheckFolder">
+      <wsdl:input message="tns:CheckFolderSoapIn" />
+      <wsdl:output message="tns:CheckFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <wsdl:input message="tns:CreateFolderSoapIn" />
+      <wsdl:output message="tns:CreateFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRootFolder">
+      <wsdl:input message="tns:CreateRootFolderSoapIn" />
+      <wsdl:output message="tns:CreateRootFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input message="tns:DeleteFileSoapIn" />
+      <wsdl:output message="tns:DeleteFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <wsdl:input message="tns:DeleteFolderSoapIn" />
+      <wsdl:output message="tns:DeleteFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FileSearch">
+      <wsdl:input message="tns:FileSearchSoapIn" />
+      <wsdl:output message="tns:FileSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthFileList">
+      <wsdl:input message="tns:GetAuthFileListSoapIn" />
+      <wsdl:output message="tns:GetAuthFileListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthList">
+      <wsdl:input message="tns:GetAuthListSoapIn" />
+      <wsdl:output message="tns:GetAuthListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <wsdl:input message="tns:GetFileInfoSoapIn" />
+      <wsdl:output message="tns:GetFileInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderInfo">
+      <wsdl:input message="tns:GetFolderInfoSoapIn" />
+      <wsdl:output message="tns:GetFolderInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderList">
+      <wsdl:input message="tns:GetFolderListSoapIn" />
+      <wsdl:output message="tns:GetFolderListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgCenterList">
+      <wsdl:input message="tns:GetOrgCenterListSoapIn" />
+      <wsdl:output message="tns:GetOrgCenterListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonInfo">
+      <wsdl:input message="tns:GetPersonInfoSoapIn" />
+      <wsdl:output message="tns:GetPersonInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsFolderInFile">
+      <wsdl:input message="tns:IsExistsFolderInFileSoapIn" />
+      <wsdl:output message="tns:IsExistsFolderInFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsRootFolder">
+      <wsdl:input message="tns:IsExistsRootFolderSoapIn" />
+      <wsdl:output message="tns:IsExistsRootFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsSubFolder">
+      <wsdl:input message="tns:IsExistsSubFolderSoapIn" />
+      <wsdl:output message="tns:IsExistsSubFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPowerUser">
+      <wsdl:input message="tns:IsPowerUserSoapIn" />
+      <wsdl:output message="tns:IsPowerUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <wsdl:input message="tns:MoveFileSoapIn" />
+      <wsdl:output message="tns:MoveFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFolder">
+      <wsdl:input message="tns:MoveFolderSoapIn" />
+      <wsdl:output message="tns:MoveFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuthList">
+      <wsdl:input message="tns:UpdateAuthListSoapIn" />
+      <wsdl:output message="tns:UpdateAuthListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileInfo">
+      <wsdl:input message="tns:UpdateFileInfoSoapIn" />
+      <wsdl:output message="tns:UpdateFileInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFolderName">
+      <wsdl:input message="tns:UpdateFolderNameSoapIn" />
+      <wsdl:output message="tns:UpdateFolderNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDownloadFileHash">
+      <wsdl:input message="tns:CheckDownloadFileHashSoapIn" />
+      <wsdl:output message="tns:CheckDownloadFileHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseDownloadFile">
+      <wsdl:input message="tns:CloseDownloadFileSoapIn" />
+      <wsdl:output message="tns:CloseDownloadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input message="tns:DownloadFileSoapIn" />
+      <wsdl:output message="tns:DownloadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSize">
+      <wsdl:input message="tns:GetFileSizeSoapIn" />
+      <wsdl:output message="tns:GetFileSizeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareDownloadFile">
+      <wsdl:input message="tns:PrepareDownloadFileSoapIn" />
+      <wsdl:output message="tns:PrepareDownloadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUploadFileHash">
+      <wsdl:input message="tns:CheckUploadFileHashSoapIn" />
+      <wsdl:output message="tns:CheckUploadFileHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FailureCloseUploadFile">
+      <wsdl:input message="tns:FailureCloseUploadFileSoapIn" />
+      <wsdl:output message="tns:FailureCloseUploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareUploadFile">
+      <wsdl:input message="tns:PrepareUploadFileSoapIn" />
+      <wsdl:output message="tns:PrepareUploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuccessCloseUploadFile">
+      <wsdl:input message="tns:SuccessCloseUploadFileSoapIn" />
+      <wsdl:output message="tns:SuccessCloseUploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input message="tns:UploadFileSoapIn" />
+      <wsdl:output message="tns:UploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AppendChunk">
+      <wsdl:input message="tns:AppendChunkSoapIn" />
+      <wsdl:output message="tns:AppendChunkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileHash">
+      <wsdl:input message="tns:CheckFileHashSoapIn" />
+      <wsdl:output message="tns:CheckFileHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadChunk">
+      <wsdl:input message="tns:DownloadChunkSoapIn" />
+      <wsdl:output message="tns:DownloadChunkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenInforItemList">
+      <wsdl:input message="tns:GetGenInforItemListSoapIn" />
+      <wsdl:output message="tns:GetGenInforItemListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConstantSelect">
+      <wsdl:input message="tns:ConstantSelectSoapIn" />
+      <wsdl:output message="tns:ConstantSelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TranslateDataSet">
+      <wsdl:input message="tns:TranslateDataSetSoapIn" />
+      <wsdl:output message="tns:TranslateDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TranslateText">
+      <wsdl:input message="tns:TranslateTextSoapIn" />
+      <wsdl:output message="tns:TranslateTextSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WhdHelperSoap" type="tns:WhdHelperSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckFolder">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRootFolder">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CreateRootFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DeleteFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileSearch">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/FileSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthFileList">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetAuthFileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthList">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetAuthList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFileInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderInfo">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFolderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderList">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFolderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgCenterList">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetOrgCenterList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonInfo">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetPersonInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsFolderInFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsFolderInFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsRootFolder">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsRootFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsSubFolder">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsSubFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPowerUser">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsPowerUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/MoveFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFolder">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/MoveFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuthList">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateAuthList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileInfo">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateFileInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFolderName">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateFolderName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDownloadFileHash">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckDownloadFileHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseDownloadFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CloseDownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSize">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFileSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareDownloadFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/PrepareDownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUploadFileHash">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckUploadFileHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FailureCloseUploadFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/FailureCloseUploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareUploadFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/PrepareUploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuccessCloseUploadFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/SuccessCloseUploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendChunk">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/AppendChunk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileHash">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckFileHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadChunk">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DownloadChunk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenInforItemList">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetGenInforItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConstantSelect">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/ConstantSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranslateDataSet">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/TranslateDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranslateText">
+      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/TranslateText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WhdHelperSoap12" type="tns:WhdHelperSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckFolder">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRootFolder">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CreateRootFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DeleteFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileSearch">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/FileSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthFileList">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetAuthFileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthList">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetAuthList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFileInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderInfo">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFolderInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderList">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFolderList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgCenterList">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetOrgCenterList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonInfo">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetPersonInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsFolderInFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsFolderInFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsRootFolder">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsRootFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExistsSubFolder">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsSubFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPowerUser">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsPowerUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/MoveFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFolder">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/MoveFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuthList">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateAuthList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFileInfo">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateFileInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFolderName">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateFolderName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDownloadFileHash">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckDownloadFileHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseDownloadFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CloseDownloadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSize">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFileSize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareDownloadFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/PrepareDownloadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUploadFileHash">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckUploadFileHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FailureCloseUploadFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/FailureCloseUploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareUploadFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/PrepareUploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuccessCloseUploadFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/SuccessCloseUploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendChunk">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/AppendChunk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileHash">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckFileHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadChunk">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DownloadChunk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenInforItemList">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetGenInforItemList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConstantSelect">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/ConstantSelect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranslateDataSet">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/TranslateDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranslateText">
+      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/TranslateText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WhdHelper">
+    <wsdl:port name="WhdHelperSoap" binding="tns:WhdHelperSoap">
+      <soap:address location="http://localhost/WhdWS_V34/WebHardWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WhdHelperSoap12" binding="tns:WhdHelperSoap12">
+      <soap12:address location="http://localhost/WhdWS_V34/WebHardWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
