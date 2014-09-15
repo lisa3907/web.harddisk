@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using uBizSoft.LIB.Logging;
+using LIB.Logging;
 using WebHard.WinCtrl.Forms;
 using WebHard.WinCtrl.Library;
 using WebHard.Proxy;

@@ -30,8 +30,8 @@ namespace WebHard.WinCtrl.Dialogs
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthListDialog));
-            this.label1 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.gridAuth = new uBizSoft.UIC.Win.Control.DVX.uGridControl();
+            this.label1 = new UIC.Win.Control.DVX.uLabelControl();
+            this.gridAuth = new UIC.Win.Control.DVX.uGridControl();
             this.gridAuthView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clmnGuid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnMember = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,17 +44,17 @@ namespace WebHard.WinCtrl.Dialogs
             this.clmnCView = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnCFolder = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnCFile = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnAdd = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnDelete = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.gridList = new uBizSoft.UIC.Win.Control.DVX.uGridControl();
+            this.btnAdd = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnDelete = new UIC.Win.Control.DVX.uSimpleButton();
+            this.gridList = new UIC.Win.Control.DVX.uGridControl();
             this.gridListView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clmnRight = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnChoice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chkbChoice = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.cbSub = new uBizSoft.UIC.Win.Control.DVX.uCheckEdit();
-            this.cbAllSub = new uBizSoft.UIC.Win.Control.DVX.uCheckEdit();
-            this.btnOK = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnCancel = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
+            this.cbSub = new UIC.Win.Control.DVX.uCheckEdit();
+            this.cbAllSub = new UIC.Win.Control.DVX.uCheckEdit();
+            this.btnOK = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnCancel = new UIC.Win.Control.DVX.uSimpleButton();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.lvHeadIcon = new System.Windows.Forms.ImageList(this.components);
             this.iltreeview = new System.Windows.Forms.ImageList(this.components);
@@ -395,16 +395,16 @@ namespace WebHard.WinCtrl.Dialogs
 
         #endregion
 
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl label1;
-        private uBizSoft.UIC.Win.Control.DVX.uGridControl gridAuth;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnAdd;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnDelete;
-        private uBizSoft.UIC.Win.Control.DVX.uGridControl gridList;
+        private UIC.Win.Control.DVX.uLabelControl label1;
+        private UIC.Win.Control.DVX.uGridControl gridAuth;
+        private UIC.Win.Control.DVX.uSimpleButton btnAdd;
+        private UIC.Win.Control.DVX.uSimpleButton btnDelete;
+        private UIC.Win.Control.DVX.uGridControl gridList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridListView;
-        private uBizSoft.UIC.Win.Control.DVX.uCheckEdit cbSub;
-        private uBizSoft.UIC.Win.Control.DVX.uCheckEdit cbAllSub;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnOK;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnCancel;
+        private UIC.Win.Control.DVX.uCheckEdit cbSub;
+        private UIC.Win.Control.DVX.uCheckEdit cbAllSub;
+        private UIC.Win.Control.DVX.uSimpleButton btnOK;
+        private UIC.Win.Control.DVX.uSimpleButton btnCancel;
         public DevExpress.XtraGrid.Views.Grid.GridView gridAuthView;
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.ImageList lvHeadIcon;

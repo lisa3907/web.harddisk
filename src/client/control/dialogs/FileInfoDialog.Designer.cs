@@ -28,12 +28,12 @@ namespace WebHard.WinCtrl.Dialogs
         /// </summary>
         private void InitializeComponent()
         {
-            this.uLabelControl1 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.uLabelControl2 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.txtTitle = new uBizSoft.UIC.Win.Control.uTextBox();
-            this.btnCancel = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnConfirm = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.txtContent = new uBizSoft.UIC.Win.Control.DVX.uMemoEdit();
+            this.uLabelControl1 = new UIC.Win.Control.DVX.uLabelControl();
+            this.uLabelControl2 = new UIC.Win.Control.DVX.uLabelControl();
+            this.txtTitle = new UIC.Win.Control.uTextBox();
+            this.btnCancel = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnConfirm = new UIC.Win.Control.DVX.uSimpleButton();
+            this.txtContent = new UIC.Win.Control.DVX.uMemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContent.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,11 +111,11 @@ namespace WebHard.WinCtrl.Dialogs
 
         #endregion
 
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl uLabelControl1;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl uLabelControl2;
-        private uBizSoft.UIC.Win.Control.uTextBox txtTitle;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnCancel;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnConfirm;
-        private uBizSoft.UIC.Win.Control.DVX.uMemoEdit txtContent;
+        private UIC.Win.Control.DVX.uLabelControl uLabelControl1;
+        private UIC.Win.Control.DVX.uLabelControl uLabelControl2;
+        private UIC.Win.Control.uTextBox txtTitle;
+        private UIC.Win.Control.DVX.uSimpleButton btnCancel;
+        private UIC.Win.Control.DVX.uSimpleButton btnConfirm;
+        private UIC.Win.Control.DVX.uMemoEdit txtContent;
     }
 }

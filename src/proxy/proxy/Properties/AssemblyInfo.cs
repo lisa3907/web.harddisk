@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // 어셈블리와 관련된 정보를 수정하려면
 // 이 특성 값을 변경하십시오.
 [assembly: AssemblyTitle("WebHard.Proxy.V34")]
-[assembly: AssemblyDescription("uBizSoft WebHard Service V34")]
+[assembly: AssemblyDescription("WebHard Service V34")]
 [assembly: AssemblyConfiguration("debug")]
-[assembly: AssemblyCompany("uBizSoft - http://www.ubizsoft.com")]
-[assembly: AssemblyProduct("uBizSoft WebMail Solution")]
-[assembly: AssemblyCopyright("(C) 2001~2007 uBizSoft Corporation. All rights Reserved")]
-[assembly: AssemblyTrademark("uBizSoft-BizFlow")]
+[assembly: AssemblyCompany("- http://www.com")]
+[assembly: AssemblyProduct("WebMail Solution")]
+[assembly: AssemblyCopyright("(C) 2001~2007 Corporation. All rights Reserved")]
+[assembly: AssemblyTrademark("WebHard")]
 [assembly: AssemblyCulture("")]
 
 // ComVisible을 false로 설정하면 이 어셈블리의 형식이 COM 구성 요소에 

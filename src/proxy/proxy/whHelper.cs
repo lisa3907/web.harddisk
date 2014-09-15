@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Text;
 
-using uBizSoft.LIB.Configuration;
+using LIB.Configuration;
 
 namespace WebHard.Proxy
 {

@@ -4,8 +4,8 @@ using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 
-using uBizSoft.UIC.Win.Control;
-using uBizSoft.UIC.Win.Control.Library;
+using UIC.Win.Control;
+using UIC.Win.Control.Library;
 
 namespace WebHard.WinCtrl.Library
 {

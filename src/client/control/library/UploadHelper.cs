@@ -4,7 +4,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Threading;
 
-using uBizSoft.LIB.Configuration;
+using LIB.Configuration;
 
 namespace WebHard.WinCtrl.Library
 {

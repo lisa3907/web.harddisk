@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using uBizSoft.UIC.Win.Control;
+using UIC.Win.Control;
 
 using WebHard.WinCtrl.Forms;
 using WebHard.WinCtrl.Library;

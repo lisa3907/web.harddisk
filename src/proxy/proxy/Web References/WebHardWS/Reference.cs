@@ -27,7 +27,7 @@ namespace WebHard.Proxy.WebHardWS {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.33440")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="WhdHelperSoap", Namespace="http://www.ubizsoft.com/WebHard.WProxy/")]
+    [System.Web.Services.WebServiceBindingAttribute(Name="WhdHelperSoap", Namespace="http://www.com/WebHard.WProxy/")]
     public partial class WhdHelper : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback CheckFolderOperationCompleted;
@@ -114,7 +114,7 @@ namespace WebHard.Proxy.WebHardWS {
         
         /// <remarks/>
         public WhdHelper() {
-            this.Url = global::WebHard.Proxy.Properties.Settings.Default.uBizSoft_PRD_WebHard_WhrdProxy_V33_WebHardWS_WebHardWS;
+            this.Url = global::WebHard.Proxy.Properties.Settings.Default.WebHard_WhrdProxy_V33_WebHardWS_WebHardWS;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -269,7 +269,7 @@ namespace WebHard.Proxy.WebHardWS {
         public event TranslateTextCompletedEventHandler TranslateTextCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/CheckFolder", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/CheckFolder", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public int CheckFolder(string p_cocd, System.Guid p_certkey, string p_ipadrs) {
             object[] results = this.Invoke("CheckFolder", new object[] {
                         p_cocd,
@@ -302,7 +302,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/CreateFolder", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/CreateFolder", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet CreateFolder(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_rname, string p_fileid) {
             object[] results = this.Invoke("CreateFolder", new object[] {
                         p_cocd,
@@ -339,7 +339,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/CreateRootFolder", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/CreateRootFolder", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet CreateRootFolder(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_rname) {
             object[] results = this.Invoke("CreateRootFolder", new object[] {
                         p_cocd,
@@ -374,7 +374,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/DeleteFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/DeleteFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool DeleteFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_guid, string p_fileid, System.DateTime p_wdate) {
             object[] results = this.Invoke("DeleteFile", new object[] {
                         p_cocd,
@@ -413,7 +413,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/DeleteFolder", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/DeleteFolder", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool DeleteFolder(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid) {
             object[] results = this.Invoke("DeleteFolder", new object[] {
                         p_cocd,
@@ -448,7 +448,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/FileSearch", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/FileSearch", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet FileSearch(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid, System.Data.DataSet p_seekds, bool p_powerUser) {
             object[] results = this.Invoke("FileSearch", new object[] {
                         p_cocd,
@@ -487,7 +487,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetAuthFileList", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetAuthFileList", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetAuthFileList(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid, bool p_powerUser) {
             object[] results = this.Invoke("GetAuthFileList", new object[] {
                         p_cocd,
@@ -524,7 +524,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetAuthList", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetAuthList", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetAuthList(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid) {
             object[] results = this.Invoke("GetAuthList", new object[] {
                         p_cocd,
@@ -559,7 +559,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetFileInfo", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetFileInfo", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetFileInfo(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid, bool p_powerUser) {
             object[] results = this.Invoke("GetFileInfo", new object[] {
                         p_cocd,
@@ -596,7 +596,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetFolderInfo", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetFolderInfo", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetFolderInfo(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid, bool p_powerUser) {
             object[] results = this.Invoke("GetFolderInfo", new object[] {
                         p_cocd,
@@ -633,7 +633,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetFolderList", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetFolderList", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetFolderList(string p_cocd, System.Guid p_certkey, string p_ipadrs, bool p_powerUser) {
             object[] results = this.Invoke("GetFolderList", new object[] {
                         p_cocd,
@@ -668,7 +668,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetOrgCenterList", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetOrgCenterList", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetOrgCenterList(string p_cocd, System.Guid p_certkey, string p_ipadrs) {
             object[] results = this.Invoke("GetOrgCenterList", new object[] {
                         p_cocd,
@@ -701,7 +701,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetPersonInfo", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetPersonInfo", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetPersonInfo(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fields) {
             object[] results = this.Invoke("GetPersonInfo", new object[] {
                         p_cocd,
@@ -736,7 +736,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/IsExistsFolderInFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/IsExistsFolderInFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool IsExistsFolderInFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid) {
             object[] results = this.Invoke("IsExistsFolderInFile", new object[] {
                         p_cocd,
@@ -771,7 +771,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/IsExistsRootFolder", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/IsExistsRootFolder", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool IsExistsRootFolder(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_rname) {
             object[] results = this.Invoke("IsExistsRootFolder", new object[] {
                         p_cocd,
@@ -806,7 +806,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/IsExistsSubFolder", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/IsExistsSubFolder", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool IsExistsSubFolder(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid) {
             object[] results = this.Invoke("IsExistsSubFolder", new object[] {
                         p_cocd,
@@ -841,7 +841,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/IsPowerUser", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/IsPowerUser", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool IsPowerUser(string p_cocd, System.Guid p_certkey, string p_ipadrs) {
             object[] results = this.Invoke("IsPowerUser", new object[] {
                         p_cocd,
@@ -874,7 +874,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/MoveFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/MoveFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool MoveFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid, System.Data.DataSet p_srcset, System.Data.DataSet p_rmvset) {
             object[] results = this.Invoke("MoveFile", new object[] {
                         p_cocd,
@@ -913,7 +913,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/MoveFolder", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/MoveFolder", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string MoveFolder(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_tfileid, string p_sfileid) {
             object[] results = this.Invoke("MoveFolder", new object[] {
                         p_cocd,
@@ -950,7 +950,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/UpdateAuthList", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/UpdateAuthList", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool UpdateAuthList(string p_cocd, System.Guid p_certkey, string p_ipadrs, bool p_checked, string p_ftype, string p_fileid, System.Data.DataSet p_authds) {
             object[] results = this.Invoke("UpdateAuthList", new object[] {
                         p_cocd,
@@ -991,7 +991,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/UpdateFileInfo", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/UpdateFileInfo", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool UpdateFileInfo(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_fileid, string p_title, string p_desc) {
             object[] results = this.Invoke("UpdateFileInfo", new object[] {
                         p_cocd,
@@ -1030,7 +1030,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/UpdateFolderName", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/UpdateFolderName", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool UpdateFolderName(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_rname, string p_fileid) {
             object[] results = this.Invoke("UpdateFolderName", new object[] {
                         p_cocd,
@@ -1067,7 +1067,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/CheckDownloadFileHash", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/CheckDownloadFileHash", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string CheckDownloadFileHash(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename) {
             object[] results = this.Invoke("CheckDownloadFileHash", new object[] {
                         p_cocd,
@@ -1104,7 +1104,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/CloseDownloadFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/CloseDownloadFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool CloseDownloadFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename) {
             object[] results = this.Invoke("CloseDownloadFile", new object[] {
                         p_cocd,
@@ -1141,7 +1141,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/DownloadFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/DownloadFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
         public byte[] DownloadFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename, long p_offset, int p_bufferSize) {
             object[] results = this.Invoke("DownloadFile", new object[] {
@@ -1183,7 +1183,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetFileSize", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetFileSize", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public long GetFileSize(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename) {
             object[] results = this.Invoke("GetFileSize", new object[] {
                         p_cocd,
@@ -1220,7 +1220,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/Ping", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/Ping", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string Ping(string p_cocd, System.Guid p_certkey, string p_ipadrs) {
             object[] results = this.Invoke("Ping", new object[] {
                         p_cocd,
@@ -1253,7 +1253,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/PrepareDownloadFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/PrepareDownloadFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool PrepareDownloadFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename, out long p_filesize, out int p_maxlength) {
             object[] results = this.Invoke("PrepareDownloadFile", new object[] {
                         p_cocd,
@@ -1292,7 +1292,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/CheckUploadFileHash", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/CheckUploadFileHash", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string CheckUploadFileHash(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_filename) {
             object[] results = this.Invoke("CheckUploadFileHash", new object[] {
                         p_cocd,
@@ -1327,7 +1327,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/FailureCloseUploadFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/FailureCloseUploadFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void FailureCloseUploadFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_filename) {
             this.Invoke("FailureCloseUploadFile", new object[] {
                         p_cocd,
@@ -1361,7 +1361,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/PrepareUploadFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/PrepareUploadFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool PrepareUploadFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.Data.DataSet p_infset, out string p_fileid, out System.DateTime p_wdate, out string p_filename, out int p_maxlength) {
             object[] results = this.Invoke("PrepareUploadFile", new object[] {
                         p_cocd,
@@ -1400,7 +1400,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/SuccessCloseUploadFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/SuccessCloseUploadFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet SuccessCloseUploadFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename, System.Data.DataSet p_infset) {
             object[] results = this.Invoke("SuccessCloseUploadFile", new object[] {
                         p_cocd,
@@ -1439,7 +1439,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/UploadFile", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/UploadFile", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool UploadFile(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_filename, [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")] byte[] p_buffer, long p_offset, int p_writeCount) {
             object[] results = this.Invoke("UploadFile", new object[] {
                         p_cocd,
@@ -1480,7 +1480,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/AppendChunk", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/AppendChunk", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool AppendChunk(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename, [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")] byte[] p_buffer, long p_offset, int p_bytesRead) {
             object[] results = this.Invoke("AppendChunk", new object[] {
                         p_cocd,
@@ -1523,7 +1523,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/CheckFileHash", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/CheckFileHash", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string CheckFileHash(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename) {
             object[] results = this.Invoke("CheckFileHash", new object[] {
                         p_cocd,
@@ -1560,7 +1560,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/DownloadChunk", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/DownloadChunk", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
         public byte[] DownloadChunk(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.DateTime p_wdate, string p_filename, long p_offset, int p_bufferSize) {
             object[] results = this.Invoke("DownloadChunk", new object[] {
@@ -1602,7 +1602,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/GetGenInforItemList", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/GetGenInforItemList", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet GetGenInforItemList(string p_cocd, System.Guid p_certkey, string p_ipadrs, string[] p_items) {
             object[] results = this.Invoke("GetGenInforItemList", new object[] {
                         p_cocd,
@@ -1637,7 +1637,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/ConstantSelect", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/ConstantSelect", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string ConstantSelect(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_appkey, string p_default) {
             object[] results = this.Invoke("ConstantSelect", new object[] {
                         p_cocd,
@@ -1674,7 +1674,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/TranslateDataSet", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/TranslateDataSet", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet TranslateDataSet(string p_cocd, System.Guid p_certkey, string p_ipadrs, System.Data.DataSet p_dataset, int p_tableindex, string p_culture, string[] p_columns) {
             object[] results = this.Invoke("TranslateDataSet", new object[] {
                         p_cocd,
@@ -1715,7 +1715,7 @@ namespace WebHard.Proxy.WebHardWS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.ubizsoft.com/WebHard.WProxy/TranslateText", RequestNamespace="http://www.ubizsoft.com/WebHard.WProxy/", ResponseNamespace="http://www.ubizsoft.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.com/WebHard.WProxy/TranslateText", RequestNamespace="http://www.com/WebHard.WProxy/", ResponseNamespace="http://www.com/WebHard.WProxy/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string TranslateText(string p_cocd, System.Guid p_certkey, string p_ipadrs, string p_culture, string p_text) {
             object[] results = this.Invoke("TranslateText", new object[] {
                         p_cocd,

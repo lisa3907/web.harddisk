@@ -8,12 +8,12 @@ using System.Security;
 // 어셈블리와 관련된 정보를 수정하려면
 // 이 특성 값을 변경하십시오.
 [assembly: AssemblyTitle("WebHard.WinCtrl.V34")]
-[assembly: AssemblyDescription("uBizSoft WebHard Service Provider V34")]
+[assembly: AssemblyDescription("WebHard Service Provider V34")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("uBizSoft - http://www.ubizsoft.com")]
-[assembly: AssemblyProduct("uBizSoft_BizFlow_Services")]
-[assembly: AssemblyCopyright("(C) 2001~2007 uBizSoft Corporation. All fRights Reserved")]
-[assembly: AssemblyTrademark("uBizSoft_BizFlow")]
+[assembly: AssemblyCompany("- http://www.com")]
+[assembly: AssemblyProduct("WebHard_Services")]
+[assembly: AssemblyCopyright("(C) 2001~2007 Corporation. All fRights Reserved")]
+[assembly: AssemblyTrademark("WebHard")]
 [assembly: AssemblyCulture("")]
 
 // ComVisible을 false로 설정하면 이 어셈블리의 형식이 COM 구성 요소에 

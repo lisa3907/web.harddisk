@@ -29,8 +29,8 @@ namespace WebHard.WinCtrl.Dialogs
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteDialog));
-            this.pbSendImage = new uBizSoft.UIC.Win.Control.DVX.uPictureEdit();
-            this.pbSendProgress = new uBizSoft.UIC.Win.Control.DVX.uPictureEdit();
+            this.pbSendImage = new UIC.Win.Control.DVX.uPictureEdit();
+            this.pbSendProgress = new UIC.Win.Control.DVX.uPictureEdit();
             this.deleteWorker = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pbSendImage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSendProgress.Properties)).BeginInit();
@@ -86,8 +86,8 @@ namespace WebHard.WinCtrl.Dialogs
 
         #endregion
 
-        private uBizSoft.UIC.Win.Control.DVX.uPictureEdit pbSendImage;
-        private uBizSoft.UIC.Win.Control.DVX.uPictureEdit pbSendProgress;
+        private UIC.Win.Control.DVX.uPictureEdit pbSendImage;
+        private UIC.Win.Control.DVX.uPictureEdit pbSendProgress;
         private System.ComponentModel.BackgroundWorker deleteWorker;
     }
 }

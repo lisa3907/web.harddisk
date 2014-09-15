@@ -28,7 +28,7 @@ namespace WebHard.WinForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.barManager = new uBizSoft.UIC.Win.Control.DVX.uBarManager();
+            this.barManager = new UIC.Win.Control.DVX.uBarManager();
             this.toolBar = new DevExpress.XtraBars.Bar();
             this.bsFile = new DevExpress.XtraBars.BarSubItem();
             this.bbLogout = new DevExpress.XtraBars.BarButtonItem();
@@ -191,7 +191,7 @@ namespace WebHard.WinForm
 
         #endregion
 
-        private uBizSoft.UIC.Win.Control.DVX.uBarManager barManager;
+        private UIC.Win.Control.DVX.uBarManager barManager;
         private DevExpress.XtraBars.Bar toolBar;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;

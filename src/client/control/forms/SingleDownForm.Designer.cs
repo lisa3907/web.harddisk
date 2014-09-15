@@ -29,21 +29,21 @@ namespace WebHard.WinCtrl.Forms
         private void InitializeComponent()
         {
             this.downloadWorker = new System.ComponentModel.BackgroundWorker();
-            this.lbDownStatus = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.lbDownLoc = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.pbDownload = new uBizSoft.UIC.Win.Control.uProgressBar();
-            this.uLabelControl1 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.uLabelControl2 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.uLabelControl3 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.uLabelControl4 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.lbDownSpeed = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.lbSavePath = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.lbRemaind = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.lbDownTime = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.chAutoClose = new uBizSoft.UIC.Win.Control.DVX.uCheckEdit();
-            this.btOpen = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btFolder = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btCancel = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
+            this.lbDownStatus = new UIC.Win.Control.DVX.uLabelControl();
+            this.lbDownLoc = new UIC.Win.Control.DVX.uLabelControl();
+            this.pbDownload = new UIC.Win.Control.uProgressBar();
+            this.uLabelControl1 = new UIC.Win.Control.DVX.uLabelControl();
+            this.uLabelControl2 = new UIC.Win.Control.DVX.uLabelControl();
+            this.uLabelControl3 = new UIC.Win.Control.DVX.uLabelControl();
+            this.uLabelControl4 = new UIC.Win.Control.DVX.uLabelControl();
+            this.lbDownSpeed = new UIC.Win.Control.DVX.uLabelControl();
+            this.lbSavePath = new UIC.Win.Control.DVX.uLabelControl();
+            this.lbRemaind = new UIC.Win.Control.DVX.uLabelControl();
+            this.lbDownTime = new UIC.Win.Control.DVX.uLabelControl();
+            this.chAutoClose = new UIC.Win.Control.DVX.uCheckEdit();
+            this.btOpen = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btFolder = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btCancel = new UIC.Win.Control.DVX.uSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.chAutoClose.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -218,20 +218,20 @@ namespace WebHard.WinCtrl.Forms
         #endregion
 
         private System.ComponentModel.BackgroundWorker downloadWorker;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbDownStatus;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbDownLoc;
-        private uBizSoft.UIC.Win.Control.uProgressBar pbDownload;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl uLabelControl1;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl uLabelControl2;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl uLabelControl3;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl uLabelControl4;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbDownSpeed;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbSavePath;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbRemaind;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbDownTime;
-        private uBizSoft.UIC.Win.Control.DVX.uCheckEdit chAutoClose;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btOpen;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btFolder;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btCancel;
+        private UIC.Win.Control.DVX.uLabelControl lbDownStatus;
+        private UIC.Win.Control.DVX.uLabelControl lbDownLoc;
+        private UIC.Win.Control.uProgressBar pbDownload;
+        private UIC.Win.Control.DVX.uLabelControl uLabelControl1;
+        private UIC.Win.Control.DVX.uLabelControl uLabelControl2;
+        private UIC.Win.Control.DVX.uLabelControl uLabelControl3;
+        private UIC.Win.Control.DVX.uLabelControl uLabelControl4;
+        private UIC.Win.Control.DVX.uLabelControl lbDownSpeed;
+        private UIC.Win.Control.DVX.uLabelControl lbSavePath;
+        private UIC.Win.Control.DVX.uLabelControl lbRemaind;
+        private UIC.Win.Control.DVX.uLabelControl lbDownTime;
+        private UIC.Win.Control.DVX.uCheckEdit chAutoClose;
+        private UIC.Win.Control.DVX.uSimpleButton btOpen;
+        private UIC.Win.Control.DVX.uSimpleButton btFolder;
+        private UIC.Win.Control.DVX.uSimpleButton btCancel;
     }
 }

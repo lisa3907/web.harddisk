@@ -30,8 +30,8 @@ namespace WebHard.WinCtrl.Dialogs
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RightsDialog));
-            this.lblTitle = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.authGrid = new uBizSoft.UIC.Win.Control.DVX.uGridControl();
+            this.lblTitle = new UIC.Win.Control.DVX.uLabelControl();
+            this.authGrid = new UIC.Win.Control.DVX.uGridControl();
             this.authGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clmnCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnType = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,8 +43,8 @@ namespace WebHard.WinCtrl.Dialogs
             this.clmnCView = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnCFolder = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnCFile = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnAdd = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.authlistGrid = new uBizSoft.UIC.Win.Control.DVX.uGridControl();
+            this.btnAdd = new UIC.Win.Control.DVX.uSimpleButton();
+            this.authlistGrid = new UIC.Win.Control.DVX.uGridControl();
             this.authlistGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,8 +56,8 @@ namespace WebHard.WinCtrl.Dialogs
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnCancel = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnOK = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
+            this.btnCancel = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnOK = new UIC.Win.Control.DVX.uSimpleButton();
             this.lvHeadIcon = new System.Windows.Forms.ImageList(this.components);
             this.iltreeview = new System.Windows.Forms.ImageList(this.components);
             this.imageList = new System.Windows.Forms.ImageList(this.components);
@@ -67,8 +67,8 @@ namespace WebHard.WinCtrl.Dialogs
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.bblDelete = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu = new uBizSoft.UIC.Win.Control.DVX.uPopupMenu();
-            this.btnDelete = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
+            this.popupMenu = new UIC.Win.Control.DVX.uPopupMenu();
+            this.btnDelete = new UIC.Win.Control.DVX.uSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.authGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authlistGrid)).BeginInit();
@@ -422,14 +422,14 @@ namespace WebHard.WinCtrl.Dialogs
 
         #endregion
 
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lblTitle;
-        private uBizSoft.UIC.Win.Control.DVX.uGridControl authGrid;
+        private UIC.Win.Control.DVX.uLabelControl lblTitle;
+        private UIC.Win.Control.DVX.uGridControl authGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView authGridView;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnAdd;
-        private uBizSoft.UIC.Win.Control.DVX.uGridControl authlistGrid;
+        private UIC.Win.Control.DVX.uSimpleButton btnAdd;
+        private UIC.Win.Control.DVX.uGridControl authlistGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView authlistGridView;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnCancel;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnOK;
+        private UIC.Win.Control.DVX.uSimpleButton btnCancel;
+        private UIC.Win.Control.DVX.uSimpleButton btnOK;
         private System.Windows.Forms.ImageList lvHeadIcon;
         private System.Windows.Forms.ImageList iltreeview;
         private System.Windows.Forms.ImageList imageList;
@@ -458,8 +458,8 @@ namespace WebHard.WinCtrl.Dialogs
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private uBizSoft.UIC.Win.Control.DVX.uPopupMenu popupMenu;
+        private UIC.Win.Control.DVX.uPopupMenu popupMenu;
         private DevExpress.XtraBars.BarButtonItem bblDelete;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnDelete;
+        private UIC.Win.Control.DVX.uSimpleButton btnDelete;
     }
 }

@@ -27,9 +27,19 @@ namespace WebHard.Proxy.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost/WhdWS_V34/WebHardWS.asmx")]
-        public string uBizSoft_PRD_WebHard_WhrdProxy_V33_WebHardWS_WebHardWS {
+        public string WebHard_WhrdProxy_V33_WebHardWS_WebHardWS {
             get {
-                return ((string)(this["uBizSoft_PRD_WebHard_WhrdProxy_V33_WebHardWS_WebHardWS"]));
+                return ((string)(this["WebHard_WhrdProxy_V33_WebHardWS_WebHardWS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost/WhdWS_V34/WebHardWS.asmx")]
+        public string WebHard_WhrdProxy_V33_WebHardWS_WebHardWS1 {
+            get {
+                return ((string)(this["WebHard_WhrdProxy_V33_WebHardWS_WebHardWS1"]));
             }
         }
     }

@@ -19,14 +19,14 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraTreeList.Nodes;
 
-using uBizSoft.LIB.Logging;
-using uBizSoft.LIB.Configuration;
+using LIB.Logging;
+using LIB.Configuration;
 using WebHard.WinCtrl.Dialogs;
 using WebHard.WinCtrl.Forms;
 using WebHard.WinCtrl.Library;
 
-using uBizSoft.UIC.Win.Control;
-using uBizSoft.UIC.Win.Control.Library;
+using UIC.Win.Control;
+using UIC.Win.Control.Library;
 
 namespace WebHard.WinCtrl
 {

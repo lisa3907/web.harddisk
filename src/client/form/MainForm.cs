@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 using DevExpress.XtraEditors;
 
-using uBizSoft.LIB.Logging;
-using uBizSoft.UIC.Win.Control;
+using LIB.Logging;
+using UIC.Win.Control;
 using WebHard.WinCtrl;
 using WebHard.WinCtrl.Library;
-using uBizSoft.UIC.Win.Control.Library;
+using UIC.Win.Control.Library;
 
 namespace WebHard.WinForm
 {
@@ -160,14 +160,14 @@ namespace WebHard.WinForm
         //=========================================================================================
         //
         //=========================================================================================
-        private uBizSoft.FAC.FWS.LoginDlg.fLoginDlg m_logDialog = null;
-        private uBizSoft.FAC.FWS.LoginDlg.fLoginDlg g_logDialog
+        private FAC.FWS.LoginDlg.fLoginDlg m_logDialog = null;
+        private FAC.FWS.LoginDlg.fLoginDlg g_logDialog
         {
             get
             {
                 if (this.m_logDialog == null)
                 {
-                    this.m_logDialog = new uBizSoft.FAC.FWS.LoginDlg.fLoginDlg();
+                    this.m_logDialog = new FAC.FWS.LoginDlg.fLoginDlg();
                     this.m_logDialog.CompanyID = this.m_cocd;
                     this.m_logDialog.WebServiceUrl = this.m_wsUrl;
                 }

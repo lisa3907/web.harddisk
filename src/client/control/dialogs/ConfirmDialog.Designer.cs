@@ -29,21 +29,21 @@ namespace WebHard.WinCtrl.Dialogs
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmDialog));
-            this.uPictureBox1 = new uBizSoft.UIC.Win.Control.DVX.uPictureEdit();
-            this.lbTitle = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.label1 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.pbBefore = new uBizSoft.UIC.Win.Control.DVX.uPictureEdit();
-            this.lbBeforeFileSize = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.lbBeforeFileWriteDate = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.label2 = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.pbAfter = new uBizSoft.UIC.Win.Control.DVX.uPictureEdit();
-            this.lbAfterFileWriteDate = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.lbAfterFileSize = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.btnOK = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnAllOk = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnCancel = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnAllCancel = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnClose = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
+            this.uPictureBox1 = new UIC.Win.Control.DVX.uPictureEdit();
+            this.lbTitle = new UIC.Win.Control.DVX.uLabelControl();
+            this.label1 = new UIC.Win.Control.DVX.uLabelControl();
+            this.pbBefore = new UIC.Win.Control.DVX.uPictureEdit();
+            this.lbBeforeFileSize = new UIC.Win.Control.DVX.uLabelControl();
+            this.lbBeforeFileWriteDate = new UIC.Win.Control.DVX.uLabelControl();
+            this.label2 = new UIC.Win.Control.DVX.uLabelControl();
+            this.pbAfter = new UIC.Win.Control.DVX.uPictureEdit();
+            this.lbAfterFileWriteDate = new UIC.Win.Control.DVX.uLabelControl();
+            this.lbAfterFileSize = new UIC.Win.Control.DVX.uLabelControl();
+            this.btnOK = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnAllOk = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnCancel = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnAllCancel = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnClose = new UIC.Win.Control.DVX.uSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.uPictureBox1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBefore.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAfter.Properties)).BeginInit();
@@ -225,20 +225,20 @@ namespace WebHard.WinCtrl.Dialogs
 
         #endregion
 
-        private uBizSoft.UIC.Win.Control.DVX.uPictureEdit uPictureBox1;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbTitle;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl label1;
-        private uBizSoft.UIC.Win.Control.DVX.uPictureEdit pbBefore;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbBeforeFileSize;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbBeforeFileWriteDate;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl label2;
-        private uBizSoft.UIC.Win.Control.DVX.uPictureEdit pbAfter;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbAfterFileWriteDate;
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbAfterFileSize;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnOK;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnAllOk;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnCancel;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnAllCancel;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnClose;
+        private UIC.Win.Control.DVX.uPictureEdit uPictureBox1;
+        private UIC.Win.Control.DVX.uLabelControl lbTitle;
+        private UIC.Win.Control.DVX.uLabelControl label1;
+        private UIC.Win.Control.DVX.uPictureEdit pbBefore;
+        private UIC.Win.Control.DVX.uLabelControl lbBeforeFileSize;
+        private UIC.Win.Control.DVX.uLabelControl lbBeforeFileWriteDate;
+        private UIC.Win.Control.DVX.uLabelControl label2;
+        private UIC.Win.Control.DVX.uPictureEdit pbAfter;
+        private UIC.Win.Control.DVX.uLabelControl lbAfterFileWriteDate;
+        private UIC.Win.Control.DVX.uLabelControl lbAfterFileSize;
+        private UIC.Win.Control.DVX.uSimpleButton btnOK;
+        private UIC.Win.Control.DVX.uSimpleButton btnAllOk;
+        private UIC.Win.Control.DVX.uSimpleButton btnCancel;
+        private UIC.Win.Control.DVX.uSimpleButton btnAllCancel;
+        private UIC.Win.Control.DVX.uSimpleButton btnClose;
     }
 }

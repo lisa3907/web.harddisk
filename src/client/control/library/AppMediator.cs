@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 using DevExpress.XtraGrid.Views.Grid;
 
-using uBizSoft.LIB.Configuration;
+using LIB.Configuration;
 using WebHard.Proxy;
-using uBizSoft.UIC.Win.Control;
+using UIC.Win.Control;
 
 namespace WebHard.WinCtrl.Library
 {
@@ -564,9 +564,9 @@ namespace WebHard.WinCtrl.Library
         /// <returns></returns>
         public string GetConstantFromClient(string p_appkey, string p_defaultValue)
         {
-            return (string)RegHelper.SNG.GetAppSettings(uBizSoft.LIB.Configuration.MKindOfLocation.Client,
-                                                        uBizSoft.LIB.Configuration.MKindOfCategory.Products,
-                                                        uBizSoft.LIB.Configuration.MKindOfProduct.WebHard,
+            return (string)RegHelper.SNG.GetAppSettings(LIB.Configuration.MKindOfLocation.Client,
+                                                        LIB.Configuration.MKindOfCategory.Products,
+                                                        LIB.Configuration.MKindOfProduct.WebHard,
                                                         p_appkey,
                                                         p_defaultValue);
         }

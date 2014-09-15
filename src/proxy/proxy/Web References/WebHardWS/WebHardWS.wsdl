@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ubizsoft.com/WebHard.WProxy/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.ubizsoft.com/WebHard.WProxy/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.com/WebHard.WProxy/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.com/WebHard.WProxy/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ubizsoft.com/WebHard.WProxy/">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.com/WebHard.WProxy/">
       <s:import namespace="http://microsoft.com/wsdl/types/" />
       <s:element name="CheckFolder">
         <s:complexType>
@@ -1282,7 +1282,7 @@
   <wsdl:binding name="WhdHelperSoap" type="tns:WhdHelperSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="CheckFolder">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckFolder" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/CheckFolder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1291,7 +1291,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateFolder">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CreateFolder" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/CreateFolder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1300,7 +1300,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateRootFolder">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CreateRootFolder" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/CreateRootFolder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1309,7 +1309,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DeleteFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/DeleteFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1318,7 +1318,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteFolder">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DeleteFolder" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/DeleteFolder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1327,7 +1327,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="FileSearch">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/FileSearch" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/FileSearch" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1336,7 +1336,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAuthFileList">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetAuthFileList" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetAuthFileList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1345,7 +1345,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAuthList">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetAuthList" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetAuthList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1354,7 +1354,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetFileInfo">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFileInfo" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetFileInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1363,7 +1363,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetFolderInfo">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFolderInfo" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetFolderInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1372,7 +1372,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetFolderList">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFolderList" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetFolderList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1381,7 +1381,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetOrgCenterList">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetOrgCenterList" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetOrgCenterList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1390,7 +1390,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetPersonInfo">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetPersonInfo" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetPersonInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1399,7 +1399,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="IsExistsFolderInFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsFolderInFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/IsExistsFolderInFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1408,7 +1408,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="IsExistsRootFolder">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsRootFolder" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/IsExistsRootFolder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1417,7 +1417,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="IsExistsSubFolder">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsSubFolder" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/IsExistsSubFolder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1426,7 +1426,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="IsPowerUser">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsPowerUser" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/IsPowerUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1435,7 +1435,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="MoveFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/MoveFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/MoveFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1444,7 +1444,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="MoveFolder">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/MoveFolder" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/MoveFolder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1453,7 +1453,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateAuthList">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateAuthList" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/UpdateAuthList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1462,7 +1462,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateFileInfo">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateFileInfo" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/UpdateFileInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1471,7 +1471,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateFolderName">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateFolderName" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/UpdateFolderName" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1480,7 +1480,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CheckDownloadFileHash">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckDownloadFileHash" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/CheckDownloadFileHash" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1489,7 +1489,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CloseDownloadFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CloseDownloadFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/CloseDownloadFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1498,7 +1498,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DownloadFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DownloadFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/DownloadFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1507,7 +1507,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetFileSize">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFileSize" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetFileSize" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1516,7 +1516,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Ping">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/Ping" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/Ping" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1525,7 +1525,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="PrepareDownloadFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/PrepareDownloadFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/PrepareDownloadFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1534,7 +1534,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CheckUploadFileHash">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckUploadFileHash" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/CheckUploadFileHash" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1543,7 +1543,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="FailureCloseUploadFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/FailureCloseUploadFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/FailureCloseUploadFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1552,7 +1552,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="PrepareUploadFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/PrepareUploadFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/PrepareUploadFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1561,7 +1561,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SuccessCloseUploadFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/SuccessCloseUploadFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/SuccessCloseUploadFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1570,7 +1570,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UploadFile">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UploadFile" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/UploadFile" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1579,7 +1579,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AppendChunk">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/AppendChunk" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/AppendChunk" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1588,7 +1588,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CheckFileHash">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckFileHash" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/CheckFileHash" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1597,7 +1597,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DownloadChunk">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DownloadChunk" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/DownloadChunk" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1606,7 +1606,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetGenInforItemList">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetGenInforItemList" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/GetGenInforItemList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1615,7 +1615,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConstantSelect">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/ConstantSelect" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/ConstantSelect" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1624,7 +1624,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TranslateDataSet">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/TranslateDataSet" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/TranslateDataSet" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1633,7 +1633,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TranslateText">
-      <soap:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/TranslateText" style="document" />
+      <soap:operation soapAction="http://www.com/WebHard.WProxy/TranslateText" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1645,7 +1645,7 @@
   <wsdl:binding name="WhdHelperSoap12" type="tns:WhdHelperSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="CheckFolder">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckFolder" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/CheckFolder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1654,7 +1654,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateFolder">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CreateFolder" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/CreateFolder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1663,7 +1663,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateRootFolder">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CreateRootFolder" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/CreateRootFolder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1672,7 +1672,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DeleteFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/DeleteFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1681,7 +1681,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteFolder">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DeleteFolder" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/DeleteFolder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1690,7 +1690,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="FileSearch">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/FileSearch" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/FileSearch" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1699,7 +1699,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAuthFileList">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetAuthFileList" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetAuthFileList" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1708,7 +1708,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAuthList">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetAuthList" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetAuthList" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1717,7 +1717,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetFileInfo">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFileInfo" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetFileInfo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1726,7 +1726,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetFolderInfo">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFolderInfo" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetFolderInfo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1735,7 +1735,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetFolderList">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFolderList" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetFolderList" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1744,7 +1744,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetOrgCenterList">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetOrgCenterList" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetOrgCenterList" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1753,7 +1753,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetPersonInfo">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetPersonInfo" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetPersonInfo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1762,7 +1762,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="IsExistsFolderInFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsFolderInFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/IsExistsFolderInFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1771,7 +1771,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="IsExistsRootFolder">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsRootFolder" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/IsExistsRootFolder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1780,7 +1780,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="IsExistsSubFolder">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsExistsSubFolder" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/IsExistsSubFolder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1789,7 +1789,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="IsPowerUser">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/IsPowerUser" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/IsPowerUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1798,7 +1798,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="MoveFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/MoveFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/MoveFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1807,7 +1807,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="MoveFolder">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/MoveFolder" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/MoveFolder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1816,7 +1816,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateAuthList">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateAuthList" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/UpdateAuthList" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1825,7 +1825,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateFileInfo">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateFileInfo" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/UpdateFileInfo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1834,7 +1834,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateFolderName">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UpdateFolderName" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/UpdateFolderName" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1843,7 +1843,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CheckDownloadFileHash">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckDownloadFileHash" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/CheckDownloadFileHash" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1852,7 +1852,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CloseDownloadFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CloseDownloadFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/CloseDownloadFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1861,7 +1861,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DownloadFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DownloadFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/DownloadFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1870,7 +1870,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetFileSize">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetFileSize" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetFileSize" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1879,7 +1879,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Ping">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/Ping" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/Ping" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1888,7 +1888,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="PrepareDownloadFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/PrepareDownloadFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/PrepareDownloadFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1897,7 +1897,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CheckUploadFileHash">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckUploadFileHash" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/CheckUploadFileHash" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1906,7 +1906,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="FailureCloseUploadFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/FailureCloseUploadFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/FailureCloseUploadFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1915,7 +1915,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="PrepareUploadFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/PrepareUploadFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/PrepareUploadFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1924,7 +1924,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SuccessCloseUploadFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/SuccessCloseUploadFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/SuccessCloseUploadFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1933,7 +1933,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UploadFile">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/UploadFile" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/UploadFile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1942,7 +1942,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AppendChunk">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/AppendChunk" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/AppendChunk" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1951,7 +1951,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CheckFileHash">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/CheckFileHash" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/CheckFileHash" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1960,7 +1960,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DownloadChunk">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/DownloadChunk" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/DownloadChunk" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1969,7 +1969,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetGenInforItemList">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/GetGenInforItemList" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/GetGenInforItemList" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1978,7 +1978,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConstantSelect">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/ConstantSelect" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/ConstantSelect" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1987,7 +1987,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TranslateDataSet">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/TranslateDataSet" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/TranslateDataSet" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1996,7 +1996,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TranslateText">
-      <soap12:operation soapAction="http://www.ubizsoft.com/WebHard.WProxy/TranslateText" style="document" />
+      <soap12:operation soapAction="http://www.com/WebHard.WProxy/TranslateText" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

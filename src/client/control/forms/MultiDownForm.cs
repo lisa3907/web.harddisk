@@ -11,8 +11,8 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-using uBizSoft.LIB.Logging;
-using uBizSoft.UIC.Win.Control;
+using LIB.Logging;
+using UIC.Win.Control;
 using WebHard.WinCtrl.Library;
 using WebHard.Proxy;
 

@@ -30,12 +30,12 @@ namespace WebHard.WinCtrl.Dialogs
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FolderListDialog));
-            this.lbTitle = new uBizSoft.UIC.Win.Control.DVX.uLabelControl();
-            this.panelMain = new uBizSoft.UIC.Win.Control.DVX.uPanelControl();
-            this.tvFolders = new uBizSoft.UIC.Win.Control.uTreeView();
+            this.lbTitle = new UIC.Win.Control.DVX.uLabelControl();
+            this.panelMain = new UIC.Win.Control.DVX.uPanelControl();
+            this.tvFolders = new UIC.Win.Control.uTreeView();
             this.iltreeview = new System.Windows.Forms.ImageList(this.components);
-            this.btnOK = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
-            this.btnCancel = new uBizSoft.UIC.Win.Control.DVX.uSimpleButton();
+            this.btnOK = new UIC.Win.Control.DVX.uSimpleButton();
+            this.btnCancel = new UIC.Win.Control.DVX.uSimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,7 @@ namespace WebHard.WinCtrl.Dialogs
             this.tvFolders.Name = "tvFolders";
             this.tvFolders.SelectedImageIndex = 2;
             this.tvFolders.Size = new System.Drawing.Size(266, 206);
-            this.tvFolders.SysImageSize = uBizSoft.UIC.Win.Control.Library.SystemImageListSize.SmallIcons;
+            this.tvFolders.SysImageSize = UIC.Win.Control.Library.SystemImageListSize.SmallIcons;
             this.tvFolders.TabIndex = 0;
             this.tvFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.OnFolderTreeViewAfterSelect);
             // 
@@ -127,11 +127,11 @@ namespace WebHard.WinCtrl.Dialogs
 
         #endregion
 
-        private uBizSoft.UIC.Win.Control.DVX.uLabelControl lbTitle;
-        private uBizSoft.UIC.Win.Control.DVX.uPanelControl panelMain;
-        private uBizSoft.UIC.Win.Control.uTreeView tvFolders;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnOK;
-        private uBizSoft.UIC.Win.Control.DVX.uSimpleButton btnCancel;
+        private UIC.Win.Control.DVX.uLabelControl lbTitle;
+        private UIC.Win.Control.DVX.uPanelControl panelMain;
+        private UIC.Win.Control.uTreeView tvFolders;
+        private UIC.Win.Control.DVX.uSimpleButton btnOK;
+        private UIC.Win.Control.DVX.uSimpleButton btnCancel;
         private System.Windows.Forms.ImageList iltreeview;
     }
 }
