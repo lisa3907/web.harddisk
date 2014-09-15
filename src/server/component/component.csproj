@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2075CFB4-EAF2-4998-BA6A-C2026695C6FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebHard.Component</RootNamespace>
+    <AssemblyName>Component.V34</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\component.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml" />
+    <Reference Include="uBizSoft.LIB.Configuration.V34, Version=3.4.2007.10, Culture=neutral, PublicKeyToken=edc90464fc7d0e3f, processorArchitecture=MSIL" />
+    <Reference Include="uBizSoft.SVC.SSO.Interface.V34, Version=3.4.2007.10, Culture=neutral, PublicKeyToken=ec64988542c8fdbe, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Component.cs" />
+    <Compile Include="WhdInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WhdInstaller.Designer.cs">
+      <DependentUpon>WhdInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\component.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\interface\interface.csproj">
+      <Project>{75B899AC-1788-4466-A00D-8AAFAF136DF6}</Project>
+      <Name>interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\library\library.csproj">
+      <Project>{4B750CD3-D67F-4660-A67D-E985642CAB9D}</Project>
+      <Name>library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>:Begin
+ if not ($(ConfigurationName))==(Debug) goto End
+
+ SET pMODE=BIZ
+ SET iMODE=COM
+
+ SET application_service="uBizSoft WebHard Service Provider V34"
+ SET application_version=3.4.2007.09
+ SET application_rootpath=$(SolutionDir)
+
+:Initilize
+ SET framewrk_path=D:\WorkingFolder\UBSV3\SDK\v3.4.2007.10\tools\assembly
+ SET framebiz_path=%25framewrk_path%25
+ if (%25pMODE%25)==(BIZ) SET framebiz_path=%25application_rootpath%25\Assembly
+ if not exist %25framebiz_path%25 mkdir %25framebiz_path%25
+
+ SET batch_name=%25framebiz_path%25\$(TargetName).bat
+ SET stopc_name=%25framebiz_path%25\$(TargetName).Stop.vbs
+ SET start_name=%25framebiz_path%25\$(TargetName).Start.vbs
+
+:PreSetup
+  echo @ECHO OFF&gt;%25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+  echo @rem start install batch procedure    &gt;&gt; %25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+
+  echo SET assembly_name=$(TargetName)&gt;&gt; %25batch_name%25
+  echo SET framebin_path=%25framewrk_path%25\bin&gt;&gt; %25batch_name%25
+  echo SET assembly_path=%25framebiz_path%25&gt;&gt; %25batch_name%25
+  echo SET assembly_version=%25application_version%25&gt;&gt; %25batch_name%25
+  echo SET install_mode=server&gt;&gt; %25batch_name%25
+  echo SET service_name=%25application_service%25&gt;&gt; %25batch_name%25
+  echo SET application_name="$(TargetName)"&gt;&gt; %25batch_name%25
+
+  echo SET dotnet_version=v2.0.50727&gt;&gt; %25batch_name%25
+  echo SET install_mode=server&gt;&gt; %25batch_name%25
+  echo SET silent_mode=silent&gt;&gt; %25batch_name%25
+
+  if (%25iMODE%25)==(COM) goto PreSetupCOM
+  if (%25iMODE%25)==(GAC) goto PreSetupGAC
+  if (%25iMODE%25)==(SVC) goto PreSetupSVC
+ goto Start
+
+ :PreSetupGAC
+ goto Start
+
+ :PreSetupCOM
+  echo Option Explicit &gt; %25stopc_name%25
+  echo Dim oCatalog&gt;&gt; %25stopc_name%25
+  echo Set oCatalog = CreateObject("COMAdmin.COMAdminCatalog")&gt;&gt; %25stopc_name%25
+  echo oCatalog.ShutdownApplication "$(TargetName)"&gt;&gt; %25stopc_name%25
+  echo Set oCatalog = Nothing&gt;&gt; %25stopc_name%25
+ goto Start
+
+ :PreSetupSVC
+  echo rem net stop %25%25service_name%25%25&gt;&gt; %25batch_name%25
+ goto Start
+
+:Start
+ copy /Y $(TargetPath) %25framebiz_path%25
+ goto PostSetup
+
+:PostSetup
+ if (%25iMODE%25)==(COM) goto PostSetupCOM
+ if (%25iMODE%25)==(GAC) goto PostSetupGAC
+ if (%25iMODE%25)==(SVC) goto PostSetupSVC
+ goto Finish
+
+ :PostSetupGAC
+  echo @call %25%25framebin_path%25%25\InstallGAC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  call %25batch_name%25
+ goto Finish
+
+ :PostSetupCOM
+  echo @call %25%25assembly_path%25%25\$(TargetName).Stop.vbs&gt;&gt; %25batch_name%25
+  echo @call %25%25framebin_path%25%25\InstallGAC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  echo @call %25%25framebin_path%25%25\InstallCOM.bat %25%25application_name%25%25 %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  call %25batch_name%25
+  echo rem @call %25%25assembly_path%25%25\$(TargetName).Start.vbs&gt;&gt; %25batch_name%25
+
+  echo Option Explicit &gt; %25start_name%25
+  echo Private catalog&gt;&gt; %25start_name%25
+  echo Private applications&gt;&gt; %25start_name%25
+  echo Private app&gt;&gt; %25start_name%25
+  echo Set catalog = CreateObject("COMAdmin.COMAdminCatalog")&gt;&gt; %25start_name%25
+  echo Set applications = catalog.GetCollection("Applications")&gt;&gt; %25start_name%25
+  echo applications.populate&gt;&gt; %25start_name%25
+  echo Dim AppObject&gt;&gt; %25start_name%25
+  echo    For Each AppObject In applications&gt;&gt; %25start_name%25
+  echo         If AppObject.Name = "$(TargetName)" Then&gt;&gt; %25start_name%25
+  echo             Set app = AppObject&gt;&gt; %25start_name%25
+  echo             Exit For&gt;&gt; %25start_name%25
+  echo         End If&gt;&gt; %25start_name%25
+  echo     Next&gt;&gt; %25start_name%25
+  echo app.Value("RunForever") = True&gt;&gt; %25start_name%25
+  echo applications.SaveChanges&gt;&gt; %25start_name%25
+  echo catalog.StartApplication "$(TargetName)"&gt;&gt; %25start_name%25
+  echo Set catalog = Nothing&gt;&gt; %25start_name%25
+ goto Finish
+
+ :PostSetupSVC
+  echo @call %25%25framebin_path%25%25\InstallSVC.bat %25%25assembly_name%25%25 %25%25assembly_path%25%25 %25%25assembly_version%25%25 %25%25service_name%25%25 %25%25install_mode%25%25 %25%25silent_mode%25%25 %25%25dotnet_version%25%25&gt;&gt; %25batch_name%25
+  echo rem net start %25%25service_name%25%25&gt;&gt; %25batch_name%25
+  rem call %25batch_name%25
+ goto Finish
+
+:Finish
+  echo @rem =================================&gt;&gt; %25batch_name%25
+  echo @rem Stop install batch procedure     &gt;&gt; %25batch_name%25
+  echo @rem =================================&gt;&gt; %25batch_name%25
+
+:End</PostBuildEvent>
+  </PropertyGroup>
+</Project>
